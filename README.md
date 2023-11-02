@@ -65,7 +65,9 @@ Flow Navigation (Screen to Screen)
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section] 
+<img width="642" alt="image" src="https://github.com/Topusaha/Workout-University/assets/63518805/f1bc835f-14fa-4c3a-9dcf-64ec855d910b">
+
+
 
 [BONUS] Digital Wireframes & Mockups
 [BONUS] Interactive Prototype

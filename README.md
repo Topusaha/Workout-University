@@ -42,7 +42,9 @@ Optional Nice-to-have Stories
 
 2. Screen Archetypes
 - Login Screen
-    - User can log in 
+    - User can log in
+    - Users can sign up
+    - Users can reset password if forgotten
 - Workout Viewer
     - User can scroll through different exercises
 - Creation
@@ -58,6 +60,8 @@ Tab Navigation (Tab to Screen)
 Flow Navigation (Screen to Screen)
 - Login Screen
     - => Workout Viewer
+    - => Sign up
+    - => Reset Password
 - Workout Viewer
     - =Exercise Details 
 - Routines Screen

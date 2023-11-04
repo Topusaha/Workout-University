@@ -45,17 +45,19 @@ class SignUpViewController: UIViewController {
         resetBorder(for: signupConfirmedPasswordTextField)
         resetBorder(for: signupEmailTextField)
         
+        signupUsername = signupUsernameTextField.text ?? ""
+        signupPassword = signuPasswordTextField.text ?? ""
+        signupEmail = signupEmailTextField.text ?? ""
+        
         // if passwords does not match issue warning
-        if signupConfirmedPasswordTextField.text != signupConfirmedPasswordTextField.text {
+        if signupPassword != signupConfirmedPassword {
             print("Password and Confirmed Password Does not Match")
             setRedBorder(for : signuPasswordTextField)
             setRedBorder(for : signupConfirmedPasswordTextField)
         }
         
     
-        signupUsername = signupUsernameTextField.text ?? ""
-        signupPassword = signuPasswordTextField.text ?? ""
-        signupEmail = signupEmailTextField.text ?? ""
+        
         
         // if contents are blank issue warnings
         if signupUsername == "" { setRedBorder(for : signupUsernameTextField) }

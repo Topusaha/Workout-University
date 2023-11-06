@@ -14,16 +14,14 @@ services:
       - mongo
     networks:
       - default
-  
+
   mongo:
     image: mongo:4.2.8
-    ports:
-      - "27017:27017"
     volumes:
       - ./data:/data/db
     networks:
       - default
-    
+
   mongo-express:
     image: mongo-express:0.54.0
     ports:

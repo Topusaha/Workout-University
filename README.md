@@ -86,3 +86,17 @@ Flow Navigation (Screen to Screen)
 [Add list of network requests by screen ]
 [Create basic snippets for each Parse network request]
 [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Reflection 
+#### Sprint 1 (Completed)
+- [X] Create login screen
+- [X] Create sign up screen
+- [X] Create forgot password screen
+
+#### Demo Link 
+https://www.loom.com/share/714d674d2e974fecacd87ef4e32273b0?sid=0c4ec153-d2de-473c-b145-7c72e741da7e
+
+
+#### Sprint 2 (To Do)
+#### Spring 3 (To Do)
+#### Spring 4 (To Do)

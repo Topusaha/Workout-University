@@ -60,7 +60,10 @@ make logs-dev
 
 The API uses the following ports:
 
+- 80: The port on which the reset password web app is running
+- 1025: The port on which the mail server is running
 - 3000: The port on which the API is running
+- 8025: The port on which the mail server's web interface is running
 - 8081: The port for Mongo Express (a MongoDB web-based admin tool)
 - 27017: The port on which MongoDB is running (not exposed in production)
 
@@ -131,6 +134,24 @@ All API endpoints are accessible under the `/login` route. Here are the availabl
 - **Request Body**:
   - `token`: User's token
 - **Response**: User's information
+
+### Request Password Reset
+
+- **Endpoint**: `/resetPassword`
+- **Method**: POST
+- **Description**: Request a password reset for a user, a mail will be sent to the user's email address
+- **Request Body**:
+  - `email`: User's email address
+- **Response**: Success message
+
+### Reset Password
+
+- **Endpoint**: `/resetPassword/:token`
+- **Method**: POST
+- **Description**: Reset a user's password
+- **Request Body**:
+  - `password`: User's new password
+- **Response**: Success message
 
 ## Database
 

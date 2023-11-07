@@ -38,6 +38,63 @@
 					"response": []
 				},
 				{
+					"name": "Request Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"jules@amps.be\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/resetPassword",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"Test123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ0MGVjNDgxZGEzNGUyMjQ1ZWQ3ZTUiLCJpYXQiOjE2OTkzODM0NjEsImV4cCI6MTY5OTM4NzA2MX0.HvlZFYec0t3SjOqMxOTAKc3vrjw9qVL58obgqe0OX4M",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"resetPassword",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ0MGVjNDgxZGEzNGUyMjQ1ZWQ3ZTUiLCJpYXQiOjE2OTkzODM0NjEsImV4cCI6MTY5OTM4NzA2MX0.HvlZFYec0t3SjOqMxOTAKc3vrjw9qVL58obgqe0OX4M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Login",
 					"request": {
 						"method": "POST",

@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Check if the MONGO_URI environment variable is set
 if (!process.env.MONGO_URL) {
@@ -18,6 +19,7 @@ con.on('open', () => {
 });
 
 app.use(express.json());
+app.use(cors());
 
 const loginRouter = require('./routers/login');
 app.use('/login', loginRouter);

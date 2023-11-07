@@ -17,7 +17,7 @@ const loginSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    email :{
+    email: {
         type: String,
         required: true,
         unique: true,
@@ -25,11 +25,20 @@ const loginSchema = new mongoose.Schema({
         trim: true
 
     },
-    token:{
+    token: {
         type: String,
         required: false
     },
-    tokenExpire:{
+    tokenExpire: {
+        type: Date,
+        required: false
+    },
+    // Add reset password token and expire date
+    resetPasswordToken: {
+        type: String,
+        required: false
+    },
+    resetPasswordExpire: {
         type: Date,
         required: false
     }
@@ -67,16 +76,60 @@ loginSchema.methods.generateAuthToken = async function () {
         this.token = token;
         // Save the token expire date
         this.tokenExpire = Date.now() + 3600000;
-        
+
         // Save the user
         await this.save();
 
         return token;
-        
+
     } catch (error) {
         throw new Error(error);
     }
 }
 
+// Method to check if the token is valid
+loginSchema.methods.isTokenValid = async function () {
+    try {
+        // Check if the token is not expired
+        if (this.tokenExpire > Date.now()) {
+            return true;
+        }
+        return false;
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+// Method to generate a reset password token
+loginSchema.methods.generateResetPasswordToken = async function () {
+    try {
+        // Generate a reset password token
+        const token = jwt.sign({ _id: this._id }, SECRET_KEY, { expiresIn: '1h' });
+
+        // Save the reset password token and its expiration date
+        this.resetPasswordToken = token;
+        this.resetPasswordTokenExpire = Date.now() + 3600000; // Set the expiration time to 1 hour
+
+        // Save the user
+        await this.save();
+
+        return token;
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+// Method to check if the reset password token is valid
+loginSchema.methods.isResetPasswordTokenValid = async function () {
+    try {
+        // Check if the token is not expired
+        if (this.resetPasswordTokenExpire > Date.now()) {
+            return true;
+        }
+        return false;
+    } catch (error) {
+        throw new Error(error);
+    }
+}
 
 module.exports = mongoose.model('Login', loginSchema);

@@ -1,6 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const Login = require('../models/login');
+const nodemailer = require('nodemailer');
+
+// Create a Nodemailer transporter using Mailgun
+const transporter = nodemailer.createTransport({
+    host: 'mailpit',
+    port: 1025,
+});
 
 // Get all users
 router.get('/', async (req, res) => {
@@ -185,6 +192,90 @@ router.get('/user', async (req, res) => {
     }
 });
 
+// Send reset password email
+router.post('/resetPassword', async (req, res) => {
+    // Get the email from the request
+    const { email } = req.body;
+
+    // Try to find the user in the database
+    try {
+        const user = await Login.find({ email });
+        // If the user was not found with the email, return an error
+        if (user.length === 0) {
+            return res.send('User not found');
+        }
+
+        // Generate a token
+        const token = await user[0].generateResetPasswordToken();
+
+        // Send the email
+        const mailOptions = {
+            from: 'info@workoutuniversity.com',
+            to: email,
+            subject: 'Password Reset',
+            text: `Click the following link to reset your password: http://localhost/reset-password.html?token=${token}`,
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error(error);
+                res.send('Error sending email');
+            } else {
+                console.log('Email sent: ' + info.response);
+                res.send('Success');
+            }
+        });
+
+    } catch (err) {
+        res.send('Error');
+    }
+});
+
+// Reset password
+router.post('/resetPassword/:token', async (req, res) => {
+    // Get the token from the request
+    const { token } = req.params;
+
+    // Check if the token is valid
+    if (!await checkResetPasswordToken(token)) {
+        // Respond with code 401 if the token is not valid
+        return res.status(401).send('Invalid token');
+    }
+
+    // Get the new password from the request
+    const { password } = req.body;
+
+    console.log(password);
+
+    // Try to find the user in the database
+    try {
+        const user = await Login.find({ resetPasswordToken: token });
+        // If the user was not found with the token, return an error
+        if (user.length === 0) {
+            // If the user was not found with the token, return an error 401
+            return res.status(401).send('User not found');
+        }
+        // console.log(password);
+
+        // Set the new password
+        user[0].password = password;
+        user[0].resetPasswordToken = '';
+        user[0].resetPasswordTokenExpire = Date.now();
+
+        // Hash the password
+        await user[0].hashPassword();
+
+        // Update the user in the database
+        await user[0].save();
+
+        // Return a success message
+        res.send('Success');
+
+    } catch (err) {
+        res.status(500).send('Error: ' + err);
+    }
+});
+
 // This function gets the token and checks if it is valid
 const checkToken = async (token) => {
     // Try to find the user in the database
@@ -203,6 +294,28 @@ const checkToken = async (token) => {
         // Return true
         return true;
 
+    } catch (err) {
+        return false;
+    }
+}
+
+// This function gets and checks the reset password token
+const checkResetPasswordToken = async (token) => {
+    // Try to find the user in the database
+    try {
+        const user = await Login.find({ resetPasswordToken: token });
+        // If the user was not found with the token, return false
+        if (user.length === 0) {
+            return false;
+        }
+        console.log(user[0].resetPasswordTokenExpire);
+        // Check if the token has expired
+        if (user[0].resetPasswordTokenExpire < Date.now()) {
+            return false;
+        }
+
+        // Return true
+        return true;
     } catch (err) {
         return false;
     }

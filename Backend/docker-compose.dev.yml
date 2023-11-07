@@ -26,7 +26,7 @@ services:
       - ./data:/data/db
     networks:
       - default
-    
+
   mongo-express:
     image: mongo-express:0.54.0
     ports:
@@ -37,6 +37,26 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongo
     depends_on:
       - mongo
+    networks:
+      - default
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    restart: unless-stopped
+    networks:
+      - default
+
+  web:
+    image: nginx:mainline-alpine-slim
+    ports:
+      - "80:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    depends_on:
+      - rest-api-dev
     networks:
       - default
 

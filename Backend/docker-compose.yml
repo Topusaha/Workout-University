@@ -44,6 +44,17 @@ services:
     networks:
       - default
 
+  web:
+    image: nginx:mainline-alpine-slim
+    ports:
+      - "80:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    depends_on:
+      - rest-api-dev
+    networks:
+      - default
+
 networks:
   default:
     driver: bridge

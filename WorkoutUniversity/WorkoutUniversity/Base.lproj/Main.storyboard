@@ -57,6 +57,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ut-de-aND"/>
+                                            <segue destination="076-pr-SvI" kind="show" id="q9U-ww-1sH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usr-Ny-n7r">
@@ -106,6 +107,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="857.25190839694653" y="-65.492957746478879"/>
+        </scene>
+        <!--Workout-Viewer-->
+        <scene sceneID="g7h-rd-9ff">
+            <objects>
+                <viewController storyboardIdentifier="Workout-Viewer-Screen" title="Workout-Viewer" id="076-pr-SvI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gfj-JW-tGL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zy0-ag-dZG">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="fjj-0E-XFX" customClass="WorkoutViewer" customModule="WorkoutUniversity">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fjj-0E-XFX" id="Ida-rf-liC">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-qz-cjq">
+                                                    <rect key="frame" x="20" y="11" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-dg-dFR">
+                                                    <rect key="frame" x="20" y="52" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Muscle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc3-cG-vPN">
+                                                    <rect key="frame" x="20" y="93" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diffcuilty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awa-6F-uy7">
+                                                    <rect key="frame" x="20" y="134" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cc3-cG-vPN" firstAttribute="top" secondItem="N4b-dg-dFR" secondAttribute="bottom" constant="20" id="1cp-aW-Lm5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Awa-6F-uy7" secondAttribute="trailing" id="4HR-Ba-CUu"/>
+                                                <constraint firstItem="N4b-dg-dFR" firstAttribute="leading" secondItem="Ida-rf-liC" secondAttribute="leadingMargin" id="81z-NZ-adp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cc3-cG-vPN" secondAttribute="trailing" id="AnO-lA-jQu"/>
+                                                <constraint firstItem="Awa-6F-uy7" firstAttribute="top" secondItem="cc3-cG-vPN" secondAttribute="bottom" constant="20" id="B20-p4-vUA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="N4b-dg-dFR" secondAttribute="trailing" id="cQ7-6Y-d6B"/>
+                                                <constraint firstItem="cc3-cG-vPN" firstAttribute="leading" secondItem="Ida-rf-liC" secondAttribute="leadingMargin" id="dP2-MJ-t6o"/>
+                                                <constraint firstItem="N4b-dg-dFR" firstAttribute="top" secondItem="KkQ-qz-cjq" secondAttribute="bottom" constant="20" id="dVN-xp-TgN"/>
+                                                <constraint firstItem="Awa-6F-uy7" firstAttribute="leading" secondItem="Ida-rf-liC" secondAttribute="leadingMargin" id="n3i-BI-vFA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KkQ-qz-cjq" secondAttribute="trailing" id="tFV-h2-lcT"/>
+                                                <constraint firstItem="KkQ-qz-cjq" firstAttribute="leading" secondItem="Ida-rf-liC" secondAttribute="leadingMargin" id="tPZ-3a-C4f"/>
+                                                <constraint firstItem="KkQ-qz-cjq" firstAttribute="top" secondItem="Ida-rf-liC" secondAttribute="topMargin" id="yqC-YA-mdb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="workoutDifficulty" destination="Awa-6F-uy7" id="r5R-wW-Z8r"/>
+                                            <outlet property="workoutTargetMuscle" destination="cc3-cG-vPN" id="l3d-xy-aJb"/>
+                                            <outlet property="workoutTitle" destination="KkQ-qz-cjq" id="bOK-Xc-XEd"/>
+                                            <outlet property="workoutType" destination="N4b-dg-dFR" id="pGC-fg-TVU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yhg-CV-AG6"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="zy0-ag-dZG" firstAttribute="leading" secondItem="yhg-CV-AG6" secondAttribute="leading" id="F5v-0w-a04"/>
+                            <constraint firstItem="yhg-CV-AG6" firstAttribute="bottom" secondItem="zy0-ag-dZG" secondAttribute="bottom" id="fxT-Li-bwL"/>
+                            <constraint firstItem="zy0-ag-dZG" firstAttribute="trailing" secondItem="yhg-CV-AG6" secondAttribute="trailing" id="mft-mr-37c"/>
+                            <constraint firstItem="zy0-ag-dZG" firstAttribute="top" secondItem="yhg-CV-AG6" secondAttribute="top" id="qh4-AX-9ez"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="workoutDifficulty" destination="Awa-6F-uy7" id="KLf-Z2-8fC"/>
+                        <outlet property="workoutTargetMuscle" destination="cc3-cG-vPN" id="iNV-qj-MdX"/>
+                        <outlet property="workoutTitle" destination="KkQ-qz-cjq" id="IRM-Do-CPf"/>
+                        <outlet property="workoutType" destination="N4b-dg-dFR" id="bvo-8r-PJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5k-cU-n2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681.679389312977" y="-65.492957746478879"/>
         </scene>
         <!--Signup-Screen-->
         <scene sceneID="sUr-S2-IJK">
@@ -196,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cU6-xc-jFQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562.5954198473282" y="-65.492957746478879"/>
+            <point key="canvasLocation" x="909" y="649"/>
         </scene>
         <!--ForgotPassword-Screen-->
         <scene sceneID="7Cv-71-ahR">
@@ -290,6 +380,12 @@
     </scenes>
     <resources>
         <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

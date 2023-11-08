@@ -111,7 +111,7 @@
         <!--Workout-Viewer-->
         <scene sceneID="g7h-rd-9ff">
             <objects>
-                <viewController storyboardIdentifier="Workout-Viewer-Screen" title="Workout-Viewer" id="076-pr-SvI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Workout-Viewer-Screen" title="Workout-Viewer" id="076-pr-SvI" customClass="WorkoutViewerViewController" customModule="WorkoutUniversity" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfj-JW-tGL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +191,7 @@
                         <outlet property="workoutTargetMuscle" destination="cc3-cG-vPN" id="iNV-qj-MdX"/>
                         <outlet property="workoutTitle" destination="KkQ-qz-cjq" id="IRM-Do-CPf"/>
                         <outlet property="workoutType" destination="N4b-dg-dFR" id="bvo-8r-PJW"/>
+                        <outlet property="workoutViewTable" destination="zy0-ag-dZG" id="HOM-hI-NKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5k-cU-n2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -13,17 +13,28 @@ class WorkoutViewerViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet weak var workoutTable: UITableView!
     var data : [Excersise] = []
+    var uniqueData : Set<Excersise> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         workoutTable.delegate = self
         workoutTable.dataSource = self
-        fetchData { [weak self] exercises in
-            self?.data = exercises
-            DispatchQueue.main.async {
-                self?.workoutTable.reloadData()
+        
+        
+        for _ in 1...3 {
+            fetchData { [weak self] exercises in
+                self?.data += exercises
+                DispatchQueue.main.async {
+                    self?.workoutTable.reloadData()
+                }
             }
+            
         }
+        
+        
+        
+        
+        
 
     }
     
@@ -37,6 +48,8 @@ class WorkoutViewerViewController: UIViewController, UITableViewDataSource, UITa
         let excersise = data[indexPath.row]
         
         cell.workoutName.text = excersise.name
+        cell.workoutName.font = UIFont.boldSystemFont(ofSize: 16) // Adjust the font size as needed
+
         cell.workoutType.text = excersise.type
         cell.workoutMuscle.text = excersise.muscle
         cell.workoutDifficulty.text = excersise.difficulty
@@ -44,10 +57,22 @@ class WorkoutViewerViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowExceriseDetail", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndexPath = workoutTable.indexPathForSelectedRow else { return }
+
+        if let destination = segue.destination as? ExcersiceDetailedViewController {
+            destination.excercise = data[selectedIndexPath.row]
+        }
+    }
+    
     func fetchData(completion: @escaping ([Excersise]) -> Void) {
         let apiKey = "CoGoxCyj4fSBJiUQFo/OjA==YPeYhNjRKFXrSSHQ"
-        let muscle = "biceps".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle="+muscle!)!
+        let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle=")!
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "X-Api-Key")
 

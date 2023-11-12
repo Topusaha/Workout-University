@@ -11,7 +11,7 @@ struct excersiseList: Decodable {
     var excerises : [Excersise] = []
 }
 
-struct Excersise: Decodable {
+struct Excersise: Decodable, Hashable {
     let name : String
     let type : String
     let muscle : String

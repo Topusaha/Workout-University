@@ -15,8 +15,9 @@
 		04748B2B2AF6830C00220BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04748B292AF6830C00220BAE /* LaunchScreen.storyboard */; };
 		04748B332AF68B9C00220BAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04748B322AF68B9C00220BAE /* SignUpViewController.swift */; };
 		04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */; };
-		04A71BB02AFB2B7F00A431E5 /* WorkoutViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A71BAF2AFB2B7F00A431E5 /* WorkoutViewer.swift */; };
-		04A71BB42AFB2CEF00A431E5 /* WorkoutViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A71BB32AFB2CEF00A431E5 /* WorkoutViewerViewController.swift */; };
+		04B66E162B004A0500CAB034 /* Excersie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E152B004A0500CAB034 /* Excersie.swift */; };
+		04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */; };
+		04B66E1A2B013B0B00CAB034 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		04748B2C2AF6830C00220BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04748B322AF68B9C00220BAE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		04A71BAF2AFB2B7F00A431E5 /* WorkoutViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewer.swift; sourceTree = "<group>"; };
-		04A71BB32AFB2CEF00A431E5 /* WorkoutViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewerViewController.swift; sourceTree = "<group>"; };
+		04B66E152B004A0500CAB034 /* Excersie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersie.swift; sourceTree = "<group>"; };
+		04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewerViewController.swift; sourceTree = "<group>"; };
+		04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,9 @@
 				04748B202AF6830C00220BAE /* SceneDelegate.swift */,
 				04748B222AF6830C00220BAE /* ViewController.swift */,
 				04748B242AF6830C00220BAE /* Main.storyboard */,
-				04A71BAF2AFB2B7F00A431E5 /* WorkoutViewer.swift */,
-				04A71BB32AFB2CEF00A431E5 /* WorkoutViewerViewController.swift */,
+				04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */,
+				04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */,
+				04B66E152B004A0500CAB034 /* Excersie.swift */,
 				04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */,
 				04748B322AF68B9C00220BAE /* SignUpViewController.swift */,
 				04748B272AF6830C00220BAE /* Assets.xcassets */,
@@ -151,12 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04748B232AF6830C00220BAE /* ViewController.swift in Sources */,
-				04A71BB02AFB2B7F00A431E5 /* WorkoutViewer.swift in Sources */,
+				04B66E162B004A0500CAB034 /* Excersie.swift in Sources */,
 				04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */,
+				04B66E1A2B013B0B00CAB034 /* WorkoutTableViewCell.swift in Sources */,
 				04748B1F2AF6830C00220BAE /* AppDelegate.swift in Sources */,
 				04748B332AF68B9C00220BAE /* SignUpViewController.swift in Sources */,
 				04748B212AF6830C00220BAE /* SceneDelegate.swift in Sources */,
-				04A71BB42AFB2CEF00A431E5 /* WorkoutViewerViewController.swift in Sources */,
+				04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

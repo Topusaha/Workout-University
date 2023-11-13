@@ -16,8 +16,19 @@ class ExcersiceDetailedViewController: UIViewController {
     @IBOutlet weak var muscle: UILabel!
     @IBOutlet weak var diffculty: UILabel!
     @IBOutlet weak var instructions: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
-    
+    @IBAction func didTap(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            // 1.
+            excercise.addToFavorites()
+        } else {
+            // 2.
+            excercise.removeFromFavorites()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = excercise.name
@@ -43,7 +54,8 @@ class ExcersiceDetailedViewController: UIViewController {
         diffculty.minimumScaleFactor = 0.5 // Adjust this value based on your preference
         
         
-        
+        favoriteButton.layer.cornerRadius = favoriteButton.frame.width / 2
+
         
     }
 }

@@ -13,7 +13,6 @@ class WorkoutViewerViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet weak var workoutTable: UITableView!
     var data : [Excersise] = []
-    var uniqueData : Set<Excersise> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +27,9 @@ class WorkoutViewerViewController: UIViewController, UITableViewDataSource, UITa
                     self?.workoutTable.reloadData()
                 }
             }
-            
         }
-        
+    
+    
         
         
         

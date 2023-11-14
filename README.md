@@ -96,7 +96,9 @@ Flow Navigation (Screen to Screen)
 #### Demo Link 
 https://www.loom.com/share/714d674d2e974fecacd87ef4e32273b0?sid=0c4ec153-d2de-473c-b145-7c72e741da7e
 
-
-#### Sprint 2 (To Do)
+#### Sprint 2 (Completed)
+- [X] Create workout table view
+- [X] Create workout table cell
+- [X] Connect to API to populate view
 #### Spring 3 (To Do)
 #### Spring 4 (To Do)

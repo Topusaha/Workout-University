@@ -29,6 +29,7 @@ class ExcersiceDetailedViewController: UIViewController {
             excercise.removeFromFavorites()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = excercise.name

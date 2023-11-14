@@ -19,6 +19,8 @@
 		04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */; };
 		04B66E1A2B013B0B00CAB034 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */; };
 		04B66E1C2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E1B2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift */; };
+		04B66E1E2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E1D2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift */; };
+		04DE8B8E2B041241002D591D /* FavoriteWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE8B8D2B041241002D591D /* FavoriteWorkoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewerViewController.swift; sourceTree = "<group>"; };
 		04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		04B66E1B2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcersiceDetailedViewController.swift; sourceTree = "<group>"; };
+		04B66E1D2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutsViewController.swift; sourceTree = "<group>"; };
+		04DE8B8D2B041241002D591D /* FavoriteWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				04748B202AF6830C00220BAE /* SceneDelegate.swift */,
 				04748B222AF6830C00220BAE /* ViewController.swift */,
 				04748B242AF6830C00220BAE /* Main.storyboard */,
+				04DE8B8D2B041241002D591D /* FavoriteWorkoutTableViewCell.swift */,
+				04B66E1D2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift */,
 				04B66E1B2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift */,
 				04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */,
 				04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */,
@@ -164,7 +170,9 @@
 				04748B1F2AF6830C00220BAE /* AppDelegate.swift in Sources */,
 				04748B332AF68B9C00220BAE /* SignUpViewController.swift in Sources */,
 				04748B212AF6830C00220BAE /* SceneDelegate.swift in Sources */,
+				04B66E1E2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift in Sources */,
 				04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */,
+				04DE8B8E2B041241002D591D /* FavoriteWorkoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

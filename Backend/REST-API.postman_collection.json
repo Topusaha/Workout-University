@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "e9542206-fd3d-41da-b8d0-6f8f2e311546",
+		"name": "REST-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11073868"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"Jules\",\n    \"password\" : \"Test1234!\",\n    \"email\" : \"jules@amps.be\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/register",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"jules@amps.be\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/resetPassword",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"Test123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ0MGVjNDgxZGEzNGUyMjQ1ZWQ3ZTUiLCJpYXQiOjE2OTkzODM0NjEsImV4cCI6MTY5OTM4NzA2MX0.HvlZFYec0t3SjOqMxOTAKc3vrjw9qVL58obgqe0OX4M",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"resetPassword",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQ0MGVjNDgxZGEzNGUyMjQ1ZWQ3ZTUiLCJpYXQiOjE2OTkzODM0NjEsImV4cCI6MTY5OTM4NzA2MX0.HvlZFYec0t3SjOqMxOTAKc3vrjw9qVL58obgqe0OX4M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"Jules\",\n    \"password\" : \"Test1234!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/login",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJ0aGlzLl9pZCIsImlhdCI6MTY5ODk1OTM5MX0.XAuHMeNDb2LoSQH1Gs-aptGlp4ILMfqZKB2UDG0DfKs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/logout",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJ0aGlzLl9pZCIsImlhdCI6MTY4MzIzNDMyN30.O0xtgRSHjv_21W1kQzhX1f_8YOM1H-4OR1iDLZ8xPGE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}/login/delete",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{Server}}/login/",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{Server}}/login/deleteall",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"path": [
+								"login",
+								"deleteall"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Server",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}

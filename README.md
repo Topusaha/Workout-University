@@ -100,5 +100,8 @@ https://www.loom.com/share/714d674d2e974fecacd87ef4e32273b0?sid=0c4ec153-d2de-47
 - [X] Create workout table view
 - [X] Create workout table cell
 - [X] Connect to API to populate view
+
+#### Demo Link 
+https://www.loom.com/share/f5b95de7d041436fabb968dafc5ea1df?sid=48060bff-4ed2-41bc-8a54-783fa819ef76
 #### Spring 3 (To Do)
 #### Spring 4 (To Do)

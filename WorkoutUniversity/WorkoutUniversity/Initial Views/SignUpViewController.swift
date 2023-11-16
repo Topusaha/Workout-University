@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signupUsernameTextField: UITextField!
     
-    @IBOutlet weak var signuPasswordTextField: UITextField!
+    @IBOutlet weak var signupPasswordTextField: UITextField!
     
     @IBOutlet weak var signupConfirmedPasswordTextField: UITextField!
     
@@ -39,42 +39,53 @@ class SignUpViewController: UIViewController {
     
     @IBAction func createAccount(_ sender: UIButton) {
         
-        // resets borders 
+        // resets borders
         resetBorder(for: signupUsernameTextField)
-        resetBorder(for: signuPasswordTextField)
+        resetBorder(for: signupPasswordTextField)
         resetBorder(for: signupConfirmedPasswordTextField)
         resetBorder(for: signupEmailTextField)
         
         signupUsername = signupUsernameTextField.text ?? ""
-        signupPassword = signuPasswordTextField.text ?? ""
+        signupPassword = signupPasswordTextField.text ?? ""
         signupEmail = signupEmailTextField.text ?? ""
+        signupConfirmedPassword = signupConfirmedPasswordTextField.text ?? ""
         
         // if passwords does not match issue warning
         if signupPassword != signupConfirmedPassword {
             print("Password and Confirmed Password Does not Match")
-            setRedBorder(for : signuPasswordTextField)
+            print("Password: \(signupPassword)")
+            print("Confirmed Password: \(signupConfirmedPassword)")
+            setRedBorder(for : signupPasswordTextField)
             setRedBorder(for : signupConfirmedPasswordTextField)
         }
-        
-    
-        
         
         // if contents are blank issue warnings
         if signupUsername == "" { setRedBorder(for : signupUsernameTextField) }
         if signupPassword == "" {
-            setRedBorder(for : signuPasswordTextField)
+            setRedBorder(for : signupPasswordTextField)
             setRedBorder(for : signupConfirmedPasswordTextField)
         }
         if signupEmail == "" {
             setRedBorder(for: signupEmailTextField)
         }
+        
+        if signupPassword == signupConfirmedPassword, !signupUsername.isEmpty, !signupEmail.isEmpty, !signupPassword.isEmpty {
+            APIRequests.signUserUp(username: signupUsername, password: signupPassword, email: signupEmail) { result in
+                switch result {
+                case .success:
+                    // Handle successful signup (e.g., navigate to the next screen)
+                    print("Signup successful")
+                case .failure(let error):
+                    // Handle signup failure or display an error message
+                    print("Signup failed with error: \(error)")
+                }
+            }
+            
+        }
+        
+        func viewDidLoad() {
+            super.viewDidLoad()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
-    
-
-    
-
 }

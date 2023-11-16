@@ -57,7 +57,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ut-de-aND"/>
-                                            <segue destination="q1k-qt-FiG" kind="show" id="R3b-lf-LIk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usr-Ny-n7r">
@@ -102,11 +101,12 @@
                     <connections>
                         <outlet property="loginPasswordTextField" destination="WII-m4-4dx" id="sh2-em-HPR"/>
                         <outlet property="loginUsernameTextField" destination="9Lx-0A-hmH" id="vQG-qO-jxI"/>
+                        <segue destination="oFU-76-EYb" kind="show" identifier="loginSegue" id="Wsf-lk-6U3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.25190839694653" y="-65.492957746478879"/>
+            <point key="canvasLocation" x="966" y="-85"/>
         </scene>
         <!--WorkoutViewer-->
         <scene sceneID="fEd-g2-55n">
@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bcL-TW-lFd">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -399,9 +399,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="DAY-m5-H0Y"/>
                     <connections>
-                        <outlet property="signuPasswordTextField" destination="Wyp-OA-zst" id="wGF-3D-Wih"/>
-                        <outlet property="signupConfirmedPasswordTextField" destination="3zF-jy-Nk4" id="tXw-GA-PAR"/>
+                        <outlet property="signupConfirmedPasswordTextField" destination="3zF-jy-Nk4" id="wYu-Zh-Sao"/>
                         <outlet property="signupEmailTextField" destination="664-SW-bMe" id="5Ai-17-wQJ"/>
+                        <outlet property="signupPasswordTextField" destination="Wyp-OA-zst" id="zOQ-V8-im5"/>
                         <outlet property="signupUsernameTextField" destination="KF8-nH-4ru" id="kwz-v1-r1s"/>
                     </connections>
                 </viewController>
@@ -517,7 +517,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2T-AV-IEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.6870229007634" y="-65.492957746478879"/>
+            <point key="canvasLocation" x="1711" y="-773"/>
         </scene>
         <!--FavoriteWorkoutViewer-->
         <scene sceneID="WvP-jb-41i">
@@ -528,7 +528,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JC8-pl-sdH">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteworkoutcell" rowHeight="222" id="owU-87-TvN" customClass="FavoriteWorkoutTableViewCell" customModule="WorkoutUniversity">
@@ -607,6 +607,9 @@
             <point key="canvasLocation" x="1710.6870229007634" y="673.94366197183103"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wsf-lk-6U3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
         <image name="figure.gymnastics" catalog="system" width="128" height="100"/>

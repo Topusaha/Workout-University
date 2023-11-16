@@ -17,6 +17,7 @@
 		04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */; };
 		0486DA412B057EAB001D7BF2 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA402B057EAB001D7BF2 /* Endpoints.swift */; };
 		0486DA432B0584C6001D7BF2 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA422B0584C6001D7BF2 /* UserRequests.swift */; };
+		0486DA452B059A1E001D7BF2 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA442B059A1D001D7BF2 /* APIRequests.swift */; };
 		04B66E162B004A0500CAB034 /* Excersie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E152B004A0500CAB034 /* Excersie.swift */; };
 		04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */; };
 		04B66E1A2B013B0B00CAB034 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 		04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		0486DA402B057EAB001D7BF2 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		0486DA422B0584C6001D7BF2 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
+		0486DA442B059A1D001D7BF2 /* APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		04B66E152B004A0500CAB034 /* Excersie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersie.swift; sourceTree = "<group>"; };
 		04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewerViewController.swift; sourceTree = "<group>"; };
 		04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				04748B322AF68B9C00220BAE /* SignUpViewController.swift */,
 				04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */,
 				0486DA422B0584C6001D7BF2 /* UserRequests.swift */,
+				0486DA442B059A1D001D7BF2 /* APIRequests.swift */,
 			);
 			path = "Initial Views";
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0486DA452B059A1E001D7BF2 /* APIRequests.swift in Sources */,
 				04748B232AF6830C00220BAE /* ViewController.swift in Sources */,
 				04B66E162B004A0500CAB034 /* Excersie.swift in Sources */,
 				04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 enum APIEndPoints {
     // base URL
-    static let baseURL = ""
+    static let baseURL = "http://localhost:3000/login"
     
     enum Authentication {
         static let login = baseURL + "/login" // APIEndpoints.Authentication.login

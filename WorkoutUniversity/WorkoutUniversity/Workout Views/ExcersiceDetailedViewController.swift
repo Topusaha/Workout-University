@@ -18,6 +18,7 @@ class ExcersiceDetailedViewController: UIViewController {
     @IBOutlet weak var instructions: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    // fix bug 
     @IBAction func didTap(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         

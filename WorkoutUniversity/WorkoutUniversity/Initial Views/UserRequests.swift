@@ -21,3 +21,5 @@ struct SignupRequest: Codable {
 struct forgotPasswordRequest: Codable {
     let email : String
 }
+
+

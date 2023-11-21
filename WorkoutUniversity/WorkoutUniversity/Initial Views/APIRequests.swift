@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class APIRequests {
@@ -60,7 +61,6 @@ class APIRequests {
             }
         }
         task.resume()
-        
     }
     
     /*
@@ -68,20 +68,49 @@ class APIRequests {
     }
     */
     
-    static func userForgotPassword(email : String) {
+    static func userForgotPassword(email : String) -> Bool {
         let forgotPasswordEndpoint = APIEndPoints.Authentication.forgotPassword
         let user_forgot_password : forgotPasswordRequest = forgotPasswordRequest(email : email)
+        var working : Bool = false
+        
+        let url = URL(string : forgotPasswordEndpoint)!
+        var request = URLRequest(url : url)
         
         do {
             let jsonData = try JSONEncoder().encode(user_forgot_password)
-
+            request.httpBody = jsonData
         } catch {
             print("Error")
         }
         
-
-
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            if let error = error {
+                print("Network Error \(error)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Invalid HTTP response")
+                return
+            }
+            
+            if (200...299).contains(httpResponse.statusCode) {
+                print("Success")
+                working = true
+            }
+            
+            else {
+                print("Failed status code: \(httpResponse.statusCode)")
+            }
+        }
+        task.resume()
+        
+        return working
     }
+    
+    
     
     static func signUserUp(username : String, password : String, email : String, completion: @escaping (Result<Void, Error>) -> Void){
         let signinEndpoint = APIEndPoints.Authentication.signup

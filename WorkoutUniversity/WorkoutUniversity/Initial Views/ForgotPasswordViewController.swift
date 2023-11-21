@@ -54,12 +54,20 @@ class ForgotPasswordViewController: UIViewController {
         print("Entered Email: " + forgotPasswordEnteredEmail)
         
         // Send info to API
-        
-        // if username of email not found in api issue red border and warning
-        
-        // Locate account and send an emal with a new password
+        if APIRequests.userForgotPassword(email: forgotPasswordEnteredEmail) == false {
+            showInvalidEmailAlert()
+        }
         
     }
+    
+    func showInvalidEmailAlert() {
+            let alertController = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address.", preferredStyle: .alert)
+
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+
+            present(alertController, animated: true, completion: nil)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

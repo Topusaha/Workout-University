@@ -15,6 +15,9 @@
 		04748B2B2AF6830C00220BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04748B292AF6830C00220BAE /* LaunchScreen.storyboard */; };
 		04748B332AF68B9C00220BAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04748B322AF68B9C00220BAE /* SignUpViewController.swift */; };
 		04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */; };
+		0486DA412B057EAB001D7BF2 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA402B057EAB001D7BF2 /* Endpoints.swift */; };
+		0486DA432B0584C6001D7BF2 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA422B0584C6001D7BF2 /* UserRequests.swift */; };
+		0486DA452B059A1E001D7BF2 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486DA442B059A1D001D7BF2 /* APIRequests.swift */; };
 		04B66E162B004A0500CAB034 /* Excersie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E152B004A0500CAB034 /* Excersie.swift */; };
 		04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */; };
 		04B66E1A2B013B0B00CAB034 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */; };
@@ -34,6 +37,9 @@
 		04748B2C2AF6830C00220BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04748B322AF68B9C00220BAE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		0486DA402B057EAB001D7BF2 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		0486DA422B0584C6001D7BF2 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
+		0486DA442B059A1D001D7BF2 /* APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		04B66E152B004A0500CAB034 /* Excersie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excersie.swift; sourceTree = "<group>"; };
 		04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewerViewController.swift; sourceTree = "<group>"; };
 		04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,21 +80,40 @@
 			children = (
 				04748B1E2AF6830C00220BAE /* AppDelegate.swift */,
 				04748B202AF6830C00220BAE /* SceneDelegate.swift */,
-				04748B222AF6830C00220BAE /* ViewController.swift */,
+				0486DA3D2B057DD0001D7BF2 /* Initial Views */,
 				04748B242AF6830C00220BAE /* Main.storyboard */,
-				04DE8B8D2B041241002D591D /* FavoriteWorkoutTableViewCell.swift */,
-				04B66E1D2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift */,
-				04B66E1B2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift */,
-				04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */,
-				04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */,
-				04B66E152B004A0500CAB034 /* Excersie.swift */,
-				04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */,
-				04748B322AF68B9C00220BAE /* SignUpViewController.swift */,
+				0486DA3F2B057E71001D7BF2 /* Workout Views */,
 				04748B272AF6830C00220BAE /* Assets.xcassets */,
 				04748B292AF6830C00220BAE /* LaunchScreen.storyboard */,
 				04748B2C2AF6830C00220BAE /* Info.plist */,
 			);
 			path = WorkoutUniversity;
+			sourceTree = "<group>";
+		};
+		0486DA3D2B057DD0001D7BF2 /* Initial Views */ = {
+			isa = PBXGroup;
+			children = (
+				0486DA402B057EAB001D7BF2 /* Endpoints.swift */,
+				04748B222AF6830C00220BAE /* ViewController.swift */,
+				04748B322AF68B9C00220BAE /* SignUpViewController.swift */,
+				04748B342AF68CD200220BAE /* ForgotPasswordViewController.swift */,
+				0486DA422B0584C6001D7BF2 /* UserRequests.swift */,
+				0486DA442B059A1D001D7BF2 /* APIRequests.swift */,
+			);
+			path = "Initial Views";
+			sourceTree = "<group>";
+		};
+		0486DA3F2B057E71001D7BF2 /* Workout Views */ = {
+			isa = PBXGroup;
+			children = (
+				04B66E152B004A0500CAB034 /* Excersie.swift */,
+				04B66E192B013B0B00CAB034 /* WorkoutTableViewCell.swift */,
+				04B66E1B2B015EBE00CAB034 /* ExcersiceDetailedViewController.swift */,
+				04B66E1D2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift */,
+				04DE8B8D2B041241002D591D /* FavoriteWorkoutTableViewCell.swift */,
+				04B66E172B0138C400CAB034 /* WorkoutViewerViewController.swift */,
+			);
+			path = "Workout Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0486DA452B059A1E001D7BF2 /* APIRequests.swift in Sources */,
 				04748B232AF6830C00220BAE /* ViewController.swift in Sources */,
 				04B66E162B004A0500CAB034 /* Excersie.swift in Sources */,
 				04748B352AF68CD200220BAE /* ForgotPasswordViewController.swift in Sources */,
@@ -170,8 +196,10 @@
 				04748B1F2AF6830C00220BAE /* AppDelegate.swift in Sources */,
 				04748B332AF68B9C00220BAE /* SignUpViewController.swift in Sources */,
 				04748B212AF6830C00220BAE /* SceneDelegate.swift in Sources */,
+				0486DA432B0584C6001D7BF2 /* UserRequests.swift in Sources */,
 				04B66E1E2B02AAE400CAB034 /* FavoriteWorkoutsViewController.swift in Sources */,
 				04B66E182B0138C400CAB034 /* WorkoutViewerViewController.swift in Sources */,
+				0486DA412B057EAB001D7BF2 /* Endpoints.swift in Sources */,
 				04DE8B8E2B041241002D591D /* FavoriteWorkoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 
                     self.performSegue(withIdentifier: "loginSegue", sender: self)
 
-                    
+
                 case .failure(let error):
                     // Handle login failure or display an error message
                     print("Login failed with error: \(error)")
@@ -77,12 +77,6 @@ class ViewController: UIViewController {
         
         
         
-        /*
-         @IBAction func pressedSignIn(_ sender: UIButton) {
-         self.resetBorder(for: self.loginUsernameTextField)
-         self.resetBorder(for: self.loginPasswordTextField)
-         }
-         */
         
         
         
@@ -91,10 +85,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-       super.viewDidLoad()
-       self.resetBorder(for: self.loginUsernameTextField)
-       self.resetBorder(for: self.loginPasswordTextField)
-       
+        super.viewDidLoad()
+        
    }
     
 }

@@ -73,35 +73,46 @@ Flow Navigation (Screen to Screen)
 
 
 
-[BONUS] Digital Wireframes & Mockups
-[BONUS] Interactive Prototype
-
-## Schema
-[This section will be completed in Unit 9]
-
-### Models
-[Add table of models]
-
 ### Networking
 [Add list of network requests by screen ]
 [Create basic snippets for each Parse network request]
 [OPTIONAL: List endpoints if using existing API such as Yelp]
 
+#### API Request Code snippet and endpoints
+```
+let muscle = "biceps".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+let url = URL(string: "https://api.api-ninjas.com/v1/exercises?muscle="+muscle!)!
+var request = URLRequest(url: url)
+request.setValue("YOUR_API_KEY", forHTTPHeaderField: "X-Api-Key")
+let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+    guard let data = data else { return }
+    print(String(data: data, encoding: .utf8)!)
+}
+task.resume()
+```
+
+#### Networking Requests
+- Workout Viewer Screen
+    - Makes an HTTP Get Request to Exercise API to get exercises to display
+      
+- Workout Generator Screen
+    - Makes an HTTP Get Request to Exercise API to get exercises to display for the user to do 
+
 ## Reflection 
 #### Sprint 1 (Completed)
-- [X] Create login screen
-- [X] Create sign up screen
+- [X] Create a login screen
+- [X] Create a sign-up screen
 - [X] Create forgot password screen
 
 #### Demo Link 
 https://www.loom.com/share/714d674d2e974fecacd87ef4e32273b0?sid=0c4ec153-d2de-473c-b145-7c72e741da7e
 
 #### Sprint 2 (Completed)
-- [X] Create workout table view
+- [X] Create a workout table view
 - [X] Create workout table cell
-- [X] Connect to API to populate view
+- [X] Connect to API to populate the view
 
 #### Demo Link 
 https://www.loom.com/share/f5b95de7d041436fabb968dafc5ea1df?sid=48060bff-4ed2-41bc-8a54-783fa819ef76
-#### Spring 3 (To Do)
-#### Spring 4 (To Do)
+#### Sprint 3 (To Do)
+#### Sprint 4 (To Do)

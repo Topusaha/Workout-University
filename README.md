@@ -98,21 +98,24 @@ task.resume()
 - Workout Generator Screen
     - Makes an HTTP Get Request to Exercise API to get exercises to display for the user to do 
 
-## Reflection 
-#### Sprint 1 (Completed)
-- [X] Create a login screen
-- [X] Create a sign-up screen
-- [X] Create forgot password screen
+## Timeline 
+#### Sprint 1
+- [ ] Create Login Screen
+- [ ] Create Sign-up Screen
+- [ ]Create Forget Password Screen
+- [ ]Create the docker container
+- [ ]Develop the API for Authentication
 
-#### Demo Link 
-https://www.loom.com/share/714d674d2e974fecacd87ef4e32273b0?sid=0c4ec153-d2de-473c-b145-7c72e741da7e
+#### Sprint 2
+- [ ] Connect the login, signup, and forgot password screen to the API for secure Authetnication
+- [ ] Create Workout tableview to view workouts
+- [ ] Create Workout table cell to see workouts in more detail
 
-#### Sprint 2 (Completed)
-- [X] Create a workout table view
-- [X] Create workout table cell
-- [X] Connect to API to populate the view
+#### Sprint 3
+- [ ] Connect to the Excerise API to populate the table view and table cells
+- [ ] Create the tab navigation controller and favorites, and workout mode tabs
+- [ ] Allow users to add exercises to the favorites tab
 
-#### Demo Link 
-https://www.loom.com/share/f5b95de7d041436fabb968dafc5ea1df?sid=48060bff-4ed2-41bc-8a54-783fa819ef76
-#### Sprint 3 (To Do)
-#### Sprint 4 (To Do)
+#### Sprint 4 (To Do Next)
+- [ ] Create the navigation flow for the workout mode feature
+- [ ] Create the model based machine learning to generate workouts for users to do

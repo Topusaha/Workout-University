@@ -100,22 +100,22 @@ task.resume()
 
 ## Timeline 
 #### Sprint 1
-- [ ] Create Login Screen
-- [ ] Create Sign-up Screen
-- [ ]Create Forget Password Screen
-- [ ]Create the docker container
-- [ ]Develop the API for Authentication
+- [X] Create Login Screen
+- [X] Create Sign-up Screen
+- [X]Create Forget Password Screen
+- [X]Create the docker container
+- [X]Develop the API for Authentication
 
 #### Sprint 2
-- [ ] Connect the login, signup, and forgot password screen to the API for secure Authetnication
-- [ ] Create Workout tableview to view workouts
-- [ ] Create Workout table cell to see workouts in more detail
+- [X] Connect the login, signup, and forgot password screen to the API for secure Authetnication
+- [X] Create Workout tableview to view workouts
+- [X] Create Workout table cell to see workouts in more detail
 
 #### Sprint 3
-- [ ] Connect to the Excerise API to populate the table view and table cells
-- [ ] Create the tab navigation controller and favorites, and workout mode tabs
-- [ ] Allow users to add exercises to the favorites tab
+- [X] Connect to the Excerise API to populate the table view and table cells
+- [X] Create the tab navigation controller and favorites, and workout mode tabs
+- [X] Allow users to add exercises to the favorites tab
 
-#### Sprint 4 (To Do Next)
+#### Sprint 4 (Future)
 - [ ] Create the navigation flow for the workout mode feature
 - [ ] Create the model based machine learning to generate workouts for users to do

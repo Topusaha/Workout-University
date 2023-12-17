@@ -102,9 +102,9 @@ task.resume()
 #### Sprint 1
 - [X] Create Login Screen
 - [X] Create Sign-up Screen
-- [X]Create Forget Password Screen
-- [X]Create the docker container
-- [X]Develop the API for Authentication
+- [X] Create Forget Password Screen
+- [X] Create the docker container
+- [X] Develop the API for Authentication
 
 #### Sprint 2
 - [X] Connect the login, signup, and forgot password screen to the API for secure Authetnication
